@@ -1,0 +1,7 @@
+keras_cv==0.3.4
+matplotlib==3.5.2
+numpy==1.23.1
+Pillow==9.3.0
+scipy==1.9.1
+tensorflow==2.11.0
+tensorflow_gpu==2.9.0
