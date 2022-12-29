@@ -7,10 +7,10 @@ images (called tiles).
 Examples:
 
 
-<img src="images/canvases/miley_cyrus.png" width="512" height="512"/> <img src="images/outputs/miley_cyrus_mosaic_art_0.png" width="512" height="512"/> 
+<img src="images/canvases/miley_cyrus.png" width="256" height="256"/> <img src="images/outputs/miley_cyrus_mosaic_art_0.png" width="512" height="512"/> 
 
 
-<img src="images/nixon_visions.png" width="512" height="512"/> <img src="images/outputs/nixon_visions_mosaic_art_0.png" width="512" height="512"/>
+<img src="images/canvases/nixon_visions.png" width="256" height="256"/> <img src="images/outputs/nixon_visions_mosaic_art_0.png" width="512" height="512"/>
 
 
 The implementation uses the [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion) model available from [KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles.
