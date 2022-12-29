@@ -6,11 +6,10 @@ versions of a given image. Given an image
 most similar image from a given set of images (referred to as the tile images or simply tiles).
 
 The implementation uses the [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion) model available from
-[KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles. It allows limitess creativity by making
-it possible to create mosaic arts of the same image using totally different tiles created by changing the model's parameters and using
+[KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles. It allows limitless creativity by creating mosaic art of the same image using different tiles created by changing the model's parameters and using
 different text prompts.
 
-In the examples below, each row shows an (original) image and two the mosaic art images created from it.
+In the examples below, each row shows an (original) image and two mosaic art images created from it.
 The left-most image is the original image, and the middle image is the mosaic art created using 2,500 tiles, and the
 right-most image is the mosaic art created using 90,000 tiles.
 
@@ -33,15 +32,14 @@ right-most image is the mosaic art created using 90,000 tiles.
 
 The main files and folders included in this repository are:
 
-1. [images/canvases](images/canvases): This folder includes the (original) images. Place your image files in this folder
-   in order to create mosaic art versions of them. Please note that the images must have the same dimensions (width and
+1. [images/canvases](images/canvases): This folder includes the (original) images. Place your image files in this folder to create mosaic art versions of them. Please note that the images must have the same dimensions (width and
    height).
 2. [images/tiles](images/tiles): This folder includes the tile images. There are already some tile images in this
    folder. You can use an instance of MosiacArtMaker to create your own custom set of tile images and put them in
    the `images/tiles` folder.
 3. [images/output](images/outputs): The mosaic art images are saved in this folder.
 4. [make_mosaic_art.ipynb](make_mosaic_art.ipynb): This notebook includes the code for creating mosaic
-   art versions of the images in the `images/canvases` folder, and also the code for creating the
+   art versions of the images in the `images/canvases` folder and also the code for creating the
    tile images.
 
 #### Dependencies
@@ -114,7 +112,7 @@ def main(remake_tiles: bool) -> None:
 ```
 
 Run the main function to execute the code. If you want to remake the tile images, set the `remake_tiles` parameter
-to `True`. Note that creating new set of tile images might take a while, so it is recommended to use the current tile
+to `True`. Note that creating a new set of tile images might take a while, so it is recommended to use the current tile
 images in the beginning by setting `remake_tiles` to `False`.
 
 ```python
@@ -142,4 +140,4 @@ main(remake_tiles=False)
 
 This project is licensed under the terms of the Apache 2.0 license. See [LICENSE](LICENSE.md) for more details.
 Please note that the image files in [images/canvases](images/canvases) were downloaded from the Web and are not owned by
-the creator of this repository. Conseqeuntly, they are not licensed under the Apache 2.0 license.
+the creator of this repository. Consequently, they may not be licensed under the Apache 2.0 license.
