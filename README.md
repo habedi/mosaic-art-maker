@@ -4,33 +4,32 @@ This repository includes the code (and other files) for creating mosaic art vers
 (referred to as the original image), the main idea is to replace (square-shaped) patches of the original image with the
 most similar image from a given set of images (referred to as the tile images or simply tiles).
 
-In the examples below, each row shows an (original) image and two versions of the mosaic art created from it.
-The left-most image is the original image, and the middle image is the mosaic art created using 2,500 tiles, and the
-right-most image is the mosaic art created using 90,000 tiles.
-
-<p style="text-align:center">
-<img alt="Original image 2" title="Nixon Visions" src="images/canvases/nixon_visions.png" width="300" height="300"/> 
-<img alt="Mosaic art image 21" title="The mosaic art version of Nixon Visions; made of 2.5k tiles" src="images/examples/nixon_visions_mosaic_art_50.png" width="300" height="300"/>
-<img alt="Mosaic art image 22" title="The mosaic art version of Nixon Visions; made of 90k tiles" src="images/examples/nixon_visions_mosaic_art_300.png" width="300" height="300"/>
-</p>
-
-<p style="text-align:center">
-<img alt="Original image 1" title="A photo of Miley Cyrus" src="images/canvases/miley_cyrus.png" width="300" height="300"/> 
-<img alt="Mosaic art image 11" title="The mosaic art version of Miley Cyrus's photo; made of 2.5k tiles" src="images/examples/miley_cyrus_mosaic_art_50.png" width="300" height="300"/>
-<img alt="Mosaic art image 12" title="The mosaic art version of Miley Cyrus's photo; made of 90k tiles" src="images/examples/miley_cyrus_mosaic_art_300.png" width="300" height="300"/>
-</p>
-
 The implementation uses the [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion) model available from
 [KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles. It makes
 it possible to create very different versions of the mosaic art by changing the model's parameters and using
 different text prompts.
 
+In the examples below, each row shows an (original) image and two versions of the mosaic art created from it.
+The left-most image is the original image, and the middle image is the mosaic art created using 2,500 tiles, and the
+right-most image is the mosaic art created using 90,000 tiles.
+
+
+<p style="text-align:center">
+<img alt="Original image 2" title="Nixon Visions" src="images/canvases/nixon_visions.png" width="256" height="256"/> 
+<img alt="Mosaic art image 21" title="The mosaic art version of Nixon Visions; made of 2.5k tiles" src="images/examples/nixon_visions_mosaic_art_50.png" width="256" height="256"/>
+<img alt="Mosaic art image 22" title="The mosaic art version of Nixon Visions; made of 90k tiles" src="images/examples/nixon_visions_mosaic_art_300.png" width="256" height="256"/>
+</p>
+
+<p style="text-align:center">
+<img alt="Original image 1" title="A photo of Miley Cyrus" src="images/canvases/miley_cyrus.png" width="256" height="256"/> 
+<img alt="Mosaic art image 11" title="The mosaic art version of Miley Cyrus's photo; made of 2.5k tiles" src="images/examples/miley_cyrus_mosaic_art_50.png" width="256" height="256"/>
+<img alt="Mosaic art image 12" title="The mosaic art version of Miley Cyrus's photo; made of 90k tiles" src="images/examples/miley_cyrus_mosaic_art_300.png" width="256" height="256"/>
+</p>
+
 ### Getting started
 
 The main dependencies are `TensorFlow/Keras` (at least version 2.9), `Pillow`, and `Scipy`. If you use Pip, you can
-install
-them by running the following
-command:
+install them by running the following command:
 
 ```bash
 pip install -r requirements.txt
@@ -41,8 +40,9 @@ The code is written in Python 3.9 and is tested on a computer running Ubuntu 22.
 
 Open [Making Mosaic Art using KerasCV+StableDiffusion](make_mosaic_art.ipynb) notebook to see the code.
 
-Modify the parameters in the main function (shown below) to create your own mosaic art versions of the given images.
-Moreover, place your images in the `images/canvases` folder if you want to create mosaic art versions of them.
+Modify the variables and parameters in the main function (shown below) to create your own mosaic art versions of the
+given images. Moreover, place your images in the `images/canvases` folder if you want to create mosaic art versions of
+them.
 
 ```python
 def main(remake_tiles: bool) -> None:
