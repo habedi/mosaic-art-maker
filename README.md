@@ -6,18 +6,21 @@ most similar image from a given set of images (referred to as the tile images or
 
 Examples:
 
-<p float="center">
-<img alt="Original image 1" title="A picture of Miley Cyrus" src="images/canvases/miley_cyrus.png" width="300" height="300"/> 
-<img alt="Mosaic art image 1" title="The mosaic art version of the Miley Cyrus's image" src="images/outputs/miley_cyrus_mosaic_art_0.png" width="300" height="300"/>
+<p style="text-align:center">
+<img alt="Original image 1" title="A picture of Miley Cyrus" src="images/canvases/miley_cyrus.png" width="256" height="256"/> 
+<img alt="Mosaic art image 11" title="The mosaic art version of the Miley Cyrus's image; made of 2.5k tiles" src="images/examples/miley_cyrus_mosaic_art_50.png" width="256" height="256"/>
+<img alt="Mosaic art image 12" title="The mosaic art version of the Miley Cyrus's image; made of 90k tiles" src="images/examples/miley_cyrus_mosaic_art_300.png" width="256" height="256"/>
 </p>
 
-<p float="center">
-<img alt="Original image 2" title="Nixon Visions" src="images/canvases/nixon_visions.png" width="300" height="300"/> 
-<img alt="Mosaic art image 2" title="The mosaic art version of Nixon Visions" src="images/outputs/nixon_visions_mosaic_art_0.png" width="300" height="300"/>
+<p style="text-align:center">
+<img alt="Original image 2" title="Nixon Visions" src="images/canvases/nixon_visions.png" width="256" height="256"/> 
+<img alt="Mosaic art image 21" title="The mosaic art version of Nixon Visions; made of 2.5k tiles" src="images/examples/nixon_visions_mosaic_art_50.png" width="256" height="256"/>
+<img alt="Mosaic art image 22" title="The mosaic art version of Nixon Visions; made of 90k tiles" src="images/examples/nixon_visions_mosaic_art_300.png" width="256" height="256"/>
 </p>
 
 The implementation uses the [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion) model available from
-[KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles.
+[KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles. It makes
+it possible to create very different versions of the mosaic art by changing the parameters of the model.
 
 ### Getting started
 
