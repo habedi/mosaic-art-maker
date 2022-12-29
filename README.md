@@ -1,6 +1,7 @@
-# Mosaic Art Maker
+# Creating Mosaic Art using AI
 
-This repository includes the code (and other files) for creating mosaic art versions of a given image. Given an image
+This repository includes the code (and other files) for creating [mosaic art](https://en.wikipedia.org/wiki/Mosaic)
+versions of a given image. Given an image
 (referred to as the original image), the main idea is to replace (square-shaped) patches of the original image with the
 most similar image from a given set of images (referred to as the tile images or simply tiles).
 
@@ -28,6 +29,24 @@ right-most image is the mosaic art created using 90,000 tiles.
 
 ### Getting started
 
+#### Main files and folders
+
+The main files and folders included in this repository are:
+
+1. [images/canvases](images/canvases): This folder includes the (original) images. Place your image files in this folder
+   in order to create mosaic art versions of them. Please note that the images must have the same dimensions (width and
+   height).
+2. [images/tiles](images/tiles): This folder includes the tile images. There are already some tile images in this
+   folder. You can use an instance of MosiacArtMaker to create your own custom set of tile images and put them in
+   the `images/tiles` folder.
+3. [images/output](images/output): This folder includes the mosaic art images created by the code. The mosaic art
+   images are saved in this folder.
+4. [make_mosaic_art.ipynb](make_mosaic_art.ipynb): This is the main notebook that includes the code for creating mosaic
+   art versions of the images in the `images/canvases` folder. The notebook also includes the code for creating the
+   tile images.
+
+#### Dependencies
+
 The main dependencies are `TensorFlow/Keras` (at least version 2.9), `Pillow`, and `Scipy`. If you use Pip, you can
 install them by running the following command:
 
@@ -37,6 +56,8 @@ pip install -r requirements.txt
 
 The code is written in Python 3.9 and is tested on a computer running Ubuntu 22.04 LTS with Keras 2.9 (and KerasCV
 0.3.4) on an NVIDIA RTX 3090 GPU with CUDA 11.6.
+
+#### Running the code
 
 Open [Making Mosaic Art using KerasCV+StableDiffusion](make_mosaic_art.ipynb) notebook to see the code.
 
@@ -101,7 +122,7 @@ images in the beginning by setting `remake_tiles` to `False`.
 main(remake_tiles=False)
 ```
 
-### To-dos
+### Ideas for improvement
 
 - [ ] Using different shapes instead of squares (of the same size) for the tiles. For example, trapezoids or triangles.
 - [ ] Using different tile images for different parts of the original image. For example, using a set of images
@@ -110,6 +131,13 @@ main(remake_tiles=False)
 - [ ] Using better similarity metrics for comparing the tiles with a patch from the original image. For example, using
   the
   [SSIM](https://en.wikipedia.org/wiki/Structural_similarity) metric instead of the Euclidean distance.
+
+### Credits
+
+- [KerasCV](https://keras.io/keras_cv): The code for creating the tile images uses
+  the StableDiffusion model available from KerasCV.
+- The idea for creating mosaic art versions of images using a collection of tile images is inspired
+  by [this post](https://medium.com/@aarongrove/creating-image-mosaics-with-python-8e4c25dd9bf9).
 
 ### License
 
