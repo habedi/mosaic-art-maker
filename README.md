@@ -39,8 +39,7 @@ The main files and folders included in this repository are:
 2. [images/tiles](images/tiles): This folder includes the tile images. There are already some tile images in this
    folder. You can use an instance of MosiacArtMaker to create your own custom set of tile images and put them in
    the `images/tiles` folder.
-3. [images/output](images/output): This folder includes the mosaic art images created by the code. The mosaic art
-   images are saved in this folder.
+3. [images/output](images/outputs): The mosaic art images are saved in this folder.
 4. [make_mosaic_art.ipynb](make_mosaic_art.ipynb): This is the main notebook that includes the code for creating mosaic
    art versions of the images in the `images/canvases` folder. The notebook also includes the code for creating the
    tile images.
@@ -54,15 +53,15 @@ install them by running the following command:
 pip install -r requirements.txt
 ```
 
-The code is written in Python 3.9 and is tested on a computer running Ubuntu 22.04 LTS with Keras 2.9 (and KerasCV
+Moreover, the code is written in Python 3.9 and is tested on a computer running Ubuntu 22.04 LTS with Keras 2.9 (and KerasCV
 0.3.4) on an NVIDIA RTX 3090 GPU with CUDA 11.6.
 
 #### Running the code
 
 Open [Making Mosaic Art using KerasCV+StableDiffusion](make_mosaic_art.ipynb) notebook to see the code.
 
-Modify the variables and parameters in the main function (shown below) to create your own mosaic art versions of the
-given images. Moreover, place your images in the `images/canvases` folder if you want to create mosaic art versions of
+Furthermore, you can modify the variables and parameters in the main function (shown below) to create your own mosaic art versions of the
+given images. You can place your images in the `images/canvases` folder if you want to create mosaic art versions of
 them.
 
 ```python
