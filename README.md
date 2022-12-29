@@ -141,7 +141,5 @@ main(remake_tiles=False)
 ### License
 
 This project is licensed under the terms of the Apache 2.0 license. See [LICENSE](LICENSE.md) for more details.
-Please note that some of the images in the [images](images) folder are not licensed under the Apache 2.0 license.
-More specifically, image files in [images/canvases](images/canvases) were downloaded from the Web and are not owned by
-the creator of this repository.
-
+Please note that the image files in [images/canvases](images/canvases) were downloaded from the Web and are not owned by
+the creator of this repository. Conseqeuntly, they are not licensed under the Apache 2.0 license.
