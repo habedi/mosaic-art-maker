@@ -1,6 +1,6 @@
 # Mosaic Art Maker
 
-This repository includes the code (and files) for creating the mosaic art version of a given image. Given an image (referred to as the original image), 
+This repository includes the code (and files) for creating mosaic art versions of a given image. Given an image (referred to as the original image), 
 the main idea is to replace (square-shaped) patches of the original image with the most similar image from a given set of 
 images (called tiles). The similarity is measured by the difference between the color histograms of the patch and tiles.
 The implementation uses the [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion) model available from [KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles.
