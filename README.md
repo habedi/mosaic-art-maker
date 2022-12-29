@@ -128,6 +128,7 @@ main(remake_tiles=False)
 - [ ] Using better similarity metrics for comparing the tiles with a patch from the original image. For example, using
   the
   [SSIM](https://en.wikipedia.org/wiki/Structural_similarity) metric instead of the Euclidean distance.
+- [ ] Adding a link to a Kaggle or Colab version of the notebook.
 
 ### Credits
 
