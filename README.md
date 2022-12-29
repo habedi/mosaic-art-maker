@@ -1,32 +1,48 @@
-# Mosaic Art Maker
+# Creating Mosaic Art using AI
 
-This repository includes the code (and other files) for creating mosaic art versions of a given image. Given an image
+This repository includes the code (and other files) for creating [mosaic art](https://en.wikipedia.org/wiki/Mosaic)
+versions of a given image. Given an image
 (referred to as the original image), the main idea is to replace (square-shaped) patches of the original image with the
 most similar image from a given set of images (referred to as the tile images or simply tiles).
 
 The implementation uses the [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion) model available from
-[KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles. It makes
-it possible to create very different versions of the mosaic art by changing the model's parameters and using
+[KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles. It allows limitless creativity by creating mosaic art of the same image using different tiles created by changing the model's parameters and using
 different text prompts.
 
-In the examples below, each row shows an (original) image and two versions of the mosaic art created from it.
+In the examples below, each row shows an (original) image and two mosaic art images created from it.
 The left-most image is the original image, and the middle image is the mosaic art created using 2,500 tiles, and the
 right-most image is the mosaic art created using 90,000 tiles.
 
 
-<p style="text-align:center">
+<p align="center">
 <img alt="Original image 2" title="Nixon Visions" src="images/canvases/nixon_visions.png" width="256" height="256"/> 
 <img alt="Mosaic art image 21" title="The mosaic art version of Nixon Visions; made of 2.5k tiles" src="images/examples/nixon_visions_mosaic_art_50.png" width="256" height="256"/>
 <img alt="Mosaic art image 22" title="The mosaic art version of Nixon Visions; made of 90k tiles" src="images/examples/nixon_visions_mosaic_art_300.png" width="256" height="256"/>
 </p>
 
-<p style="text-align:center">
+<p align="center">
 <img alt="Original image 1" title="A photo of Miley Cyrus" src="images/canvases/miley_cyrus.png" width="256" height="256"/> 
 <img alt="Mosaic art image 11" title="The mosaic art version of Miley Cyrus's photo; made of 2.5k tiles" src="images/examples/miley_cyrus_mosaic_art_50.png" width="256" height="256"/>
 <img alt="Mosaic art image 12" title="The mosaic art version of Miley Cyrus's photo; made of 90k tiles" src="images/examples/miley_cyrus_mosaic_art_300.png" width="256" height="256"/>
 </p>
 
 ### Getting started
+
+#### Main files and folders
+
+The main files and folders included in this repository are:
+
+1. [images/canvases](images/canvases): This folder includes the (original) images. Place your image files in this folder to create mosaic art versions of them. Please note that the images must have the same dimensions (width and
+   height).
+2. [images/tiles](images/tiles): This folder includes the tile images. There are already some tile images in this
+   folder. You can use an instance of MosiacArtMaker to create your own custom set of tile images and put them in
+   the `images/tiles` folder.
+3. [images/output](images/outputs): The mosaic art images are saved in this folder.
+4. [make_mosaic_art.ipynb](make_mosaic_art.ipynb): This notebook includes the code for creating mosaic
+   art versions of the images in the `images/canvases` folder and also the code for creating the
+   tile images.
+
+#### Dependencies
 
 The main dependencies are `TensorFlow/Keras` (at least version 2.9), `Pillow`, and `Scipy`. If you use Pip, you can
 install them by running the following command:
@@ -35,13 +51,15 @@ install them by running the following command:
 pip install -r requirements.txt
 ```
 
-The code is written in Python 3.9 and is tested on a computer running Ubuntu 22.04 LTS with Keras 2.9 (and KerasCV
+Moreover, the code is written in Python 3.9 and is tested on a computer running Ubuntu 22.04 LTS with Keras 2.9 (and KerasCV
 0.3.4) on an NVIDIA RTX 3090 GPU with CUDA 11.6.
+
+#### Running the code
 
 Open [Making Mosaic Art using KerasCV+StableDiffusion](make_mosaic_art.ipynb) notebook to see the code.
 
-Modify the variables and parameters in the main function (shown below) to create your own mosaic art versions of the
-given images. Moreover, place your images in the `images/canvases` folder if you want to create mosaic art versions of
+Furthermore, you can modify the variables and parameters in the main function (shown below) to create your own mosaic art versions of the
+given images. You can place your images in the `images/canvases` folder if you want to create mosaic art versions of
 them.
 
 ```python
@@ -94,27 +112,37 @@ def main(remake_tiles: bool) -> None:
 ```
 
 Run the main function to execute the code. If you want to remake the tile images, set the `remake_tiles` parameter
-to `True`. Note that creating new set of tile images might take a while, so it is recommended to use the current tile
+to `True`. Note that creating a new set of tile images might take a while, so it is recommended to use the current tile
 images in the beginning by setting `remake_tiles` to `False`.
 
 ```python
 main(remake_tiles=False)
 ```
 
-### To-dos
+#### Kaggle notebook
 
-- [ ] Using different shapes instead of squares (of the same size) for the tiles. For example, trapezoids or triangles.
-- [ ] Using different tile images for different parts of the original image. For example, using a set of images
-  containing faces for the faces in the original image, and using a set of images containing landscapes for the
-  background in the original image.
-- [ ] Using better similarity metrics for comparing the tiles with a patch from the original image. For example, using
-  the
-  [SSIM](https://en.wikipedia.org/wiki/Structural_similarity) metric instead of the Euclidean distance.
+The notebook is available on Kaggle now. You can open it using [this link](https://www.kaggle.com/code/habedi/creating-mosaic-art-using-kerascv-stablediffusion).
+
+### Ideas for improvement
+
+- [x] Adding a link to a Kaggle or Colab version of the notebook.
+
+<del>- [ ] Using different shapes instead of squares (of the same size) for the tiles. For example, trapezoids or triangles. </del>
+
+<del>- [ ] Using different tile images for different parts of the original image. For example, using a set of images containing faces for the faces in the original image, and using a set of images containing landscapes for the
+  background in the original image. </del>
+  
+  <del>- [ ] Using better similarity metrics for comparing the tiles with a patch from the original image. For example, using the [SSIM](https://en.wikipedia.org/wiki/Structural_similarity) metric instead of the Euclidean distance. </del>
+
+### Credits
+
+- [KerasCV](https://keras.io/keras_cv): The code for creating the tile images uses
+  the StableDiffusion model available from KerasCV.
+- The idea for creating mosaic art versions of images using a collection of tile images is inspired
+  by [this post](https://medium.com/@aarongrove/creating-image-mosaics-with-python-8e4c25dd9bf9).
 
 ### License
 
 This project is licensed under the terms of the Apache 2.0 license. See [LICENSE](LICENSE.md) for more details.
-Please note that some of the images in the [images](images) folder are not licensed under the Apache 2.0 license.
-More specifically, image files in [images/canvases](images/canvases) were downloaded from the Web and are not owned by
-the creator of this repository.
-
+Please note that the image files in [images/canvases](images/canvases) were downloaded from the Web and are not owned by
+the creator of this repository. Consequently, they may not be licensed under the Apache 2.0 license.
