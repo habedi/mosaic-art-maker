@@ -40,8 +40,8 @@ The main files and folders included in this repository are:
    folder. You can use an instance of MosiacArtMaker to create your own custom set of tile images and put them in
    the `images/tiles` folder.
 3. [images/output](images/outputs): The mosaic art images are saved in this folder.
-4. [make_mosaic_art.ipynb](make_mosaic_art.ipynb): This is the main notebook that includes the code for creating mosaic
-   art versions of the images in the `images/canvases` folder. The notebook also includes the code for creating the
+4. [make_mosaic_art.ipynb](make_mosaic_art.ipynb): This notebook includes the code for creating mosaic
+   art versions of the images in the `images/canvases` folder, and also the code for creating the
    tile images.
 
 #### Dependencies
