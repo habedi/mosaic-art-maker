@@ -6,8 +6,8 @@ versions of a given image. Given an image
 most similar image from a given set of images (referred to as the tile images or simply tiles).
 
 The implementation uses the [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion) model available from
-[KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles. It makes
-it possible to create very different versions of the mosaic art by changing the model's parameters and using
+[KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles. It allows limitess creativity by making
+it possible to create mosaic arts of the same image using totally different tiles created by changing the model's parameters and using
 different text prompts.
 
 In the examples below, each row shows an (original) image and two versions of the mosaic art created from it.
