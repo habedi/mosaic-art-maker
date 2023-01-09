@@ -119,8 +119,13 @@ images in the beginning by setting `remake_tiles` to `False`.
 main(remake_tiles=False)
 ```
 
+#### Kaggle notebook
+
+The notebook is available on Kaggle now. You can open it using [this link](https://www.kaggle.com/code/habedi/creating-mosaic-art-using-kerascv-stablediffusion).
+
 ### Ideas for improvement
 
+- [x] Adding a link to a Kaggle or Colab version of the notebook.
 - [ ] Using different shapes instead of squares (of the same size) for the tiles. For example, trapezoids or triangles.
 - [ ] Using different tile images for different parts of the original image. For example, using a set of images
   containing faces for the faces in the original image, and using a set of images containing landscapes for the
@@ -128,7 +133,6 @@ main(remake_tiles=False)
 - [ ] Using better similarity metrics for comparing the tiles with a patch from the original image. For example, using
   the
   [SSIM](https://en.wikipedia.org/wiki/Structural_similarity) metric instead of the Euclidean distance.
-- [ ] Adding a link to a Kaggle or Colab version of the notebook.
 
 ### Credits
 
