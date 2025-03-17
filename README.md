@@ -6,10 +6,9 @@ versions of a given image. Given an image
 most similar image from a given set of images (referred to as the tile images or simply tiles).
 
 The implementation uses the [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion) model available from
-[KerasCV](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles. It allows
-limitless creativity by creating mosaic art of the same image using different tiles created by changing the model's
-parameters and using
-different text prompts.
+[keras-cv](https://github.com/keras-team/keras-cv) submodule of [Keras](https://keras.io/) to create the tiles.
+It allows limitless creativity by creating mosaic art of the same image using different tiles created by changing
+the model's parameters and using different text prompts.
 
 In the examples below, each row shows an (original) image and two mosaic art images created from it.
 The left-most image is the original image, and the middle image is the mosaic art created using 2,500 tiles, and the
@@ -55,7 +54,7 @@ git clone https://github.com/habedi/mosaic-art-maker
 # Change the working directory
 cd mosaic-art-maker
 
-# Create a Poetry environment and install the dependencies
+# Create a Poetry environment and install the dependencies (need Poetry installed)
 poetry install --no-root
 ```
 
