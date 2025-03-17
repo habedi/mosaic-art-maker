@@ -151,6 +151,6 @@ using the [SSIM](https://en.wikipedia.org/wiki/Structural_similarity) metric ins
 
 ### License
 
-This project is licensed under the terms of the Apache 2.0 license. See [LICENSE](LICENSE.md) for more details.
+This project is licensed under the terms of the Apache 2.0 license. See [LICENSE](LICENSE) for more details.
 Please note that the image files in [images/canvases](images/canvases) were downloaded from the Web and are not owned by
 the creator of this repository. Consequently, they may not be licensed under the Apache 2.0 license.
